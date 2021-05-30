@@ -128,7 +128,7 @@ class LoginActivity : AppCompatActivity() {
     private fun startJobScheduler() = jobScheduler.schedule(
         JobInfo.Builder(0, ComponentName(packageName, LogoutJob::class.java.name))
             .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
-            .setPeriodic((4 * 3.6e+6).toLong()) // 4 hours -> nem lehet kevesebb mint 15 perc mert nem hivodik meg
+            .setPeriodic(4 * 3_600_000) // 4 ora -> nem lehet kevesebb mint 15 perc mert nem hivodik meg
             .build()
     )
 }

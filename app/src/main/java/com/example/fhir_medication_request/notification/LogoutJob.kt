@@ -58,10 +58,11 @@ class LogoutJob : JobService() {
         fun cancel(id: Int) = notifyManager.cancel(id)
 
         companion object {
-            const val CHANNEL_ID = "medication_requests_default_channel"
-            @JvmStatic var notificationID = 0
+            private const val CHANNEL_ID = "medication_requests_default_channel"
+
+            @JvmStatic
+            private var notificationID = 0
                 get() = field++
-                private set
         }
     }
 }

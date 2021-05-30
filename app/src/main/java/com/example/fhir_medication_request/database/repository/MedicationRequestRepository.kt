@@ -52,7 +52,7 @@ class MedicationRequestRepository(
                     "subject" to mr.subject,
                     "authoredOn" to mr.authoredOn,
                     "substitution.allowed" to mr.substitution?.allowed,
-                    "substitution.reason" to mr.substitution?.reason // TODO substitution change may not work
+                    "substitution.reason" to mr.substitution?.reason
                 )
             )
             transaction.update(

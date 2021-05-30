@@ -14,14 +14,13 @@ import com.example.fhir_medication_request.ui.LoginActivity
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class LogoutJob : JobService() {
+class LoginJob : JobService() {
     private val notificationHelper by lazy { NotificationHelper(applicationContext) }
     private val auth by lazy { Firebase.auth }
 
     override fun onStartJob(params: JobParameters?): Boolean {
         if (auth.currentUser != null) {
-            auth.signOut()
-            notificationHelper.send("We have logged you out automatically ノಠ益ಠノ彡┻━┻")
+            notificationHelper.send("Nice login my dude ノಠ益ಠノ彡┻━┻")
         }
         return false
     }

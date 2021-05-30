@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FHIRMedicationRequest">
         <service
-            android:name=".notification.LogoutJob"
+            android:name=".notification.LoginJob"
             android:permission="android.permission.BIND_JOB_SERVICE"/>
         <activity android:name=".ui.AddEditActivity" />
         <activity

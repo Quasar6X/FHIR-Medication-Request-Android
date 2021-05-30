@@ -15,7 +15,7 @@ import com.example.fhir_medication_request.R
 import com.example.fhir_medication_request.common.SNACK
 import com.example.fhir_medication_request.common.goToMain
 import com.example.fhir_medication_request.databinding.ActivityLoginBinding
-import com.example.fhir_medication_request.notification.LogoutJob
+import com.example.fhir_medication_request.notification.LoginJob
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -24,6 +24,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import java.util.concurrent.TimeUnit
 
 class LoginActivity : AppCompatActivity() {
 
@@ -126,9 +127,8 @@ class LoginActivity : AppCompatActivity() {
         = googleSignInCallback.launch(googleSignInClient.signInIntent)
 
     private fun startJobScheduler() = jobScheduler.schedule(
-        JobInfo.Builder(0, ComponentName(packageName, LogoutJob::class.java.name))
-            .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
-            .setPeriodic(4 * 3_600_000L) // 4 ora -> nem lehet kevesebb mint 15 perc mert nem hivodik meg
+        JobInfo.Builder(0, ComponentName(packageName, LoginJob::class.java.name))
+            .setRequiredNetworkType(JobInfo.NETWORK_TYPE_NOT_ROAMING)
             .build()
     )
 }

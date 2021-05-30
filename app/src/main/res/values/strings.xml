@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">Medication Request</string>
+    <string name="add_medication_request">Add Medication request</string>
+    <string name="placeholder">placeholder</string>
+    <string name="intent">Intent</string>
+    <string name="medication">Medication</string>
+    <string name="subject">Subject</string>
+    <string name="edit">Edit</string>
+    <string name="Delete">delete</string>
+    <string name="tap_for_more_details">Tap for more details</string>
+    <string name="search">Search</string>
+    <string name="view">View</string>
+    <string name="log_out">Log out</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="title_activity_login">Welcome</string>
+    <string name="title_activity_register">Register</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_again">Password again</string>
+    <string name="action_register">Register</string>
+    <string name="action_login">Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_email">Not a valid e-mail address</string>
+    <string name="invalid_password">Password must be at least 6 characters long</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_as_guest">Continue as Guest</string>
+    <string name="identifiers">Identifiers</string>
+    <string name="identifier">Identifier</string>
+    <string name="uid">UID</string>
+    <string name="name">Name</string>
+    <string name="category">Category</string>
+    <string name="categories">Categories</string>
+    <string name="status">Status</string>
+    <string name="status_reason">Status reason</string>
+    <string name="priority">Priority</string>
+    <string name="none">None</string>
+    <string name="perform">Perform</string>
+    <string name="reported">Reported</string>
+    <string name="authored_on">Authored on</string>
+    <string name="notes">Notes</string>
+    <string name="author">Author</string>
+    <string name="text">Text</string>
+    <string name="date_amp_time"><![CDATA[Date & Time]]></string>
+    <string name="clear">Clear</string>
+    <string name="dosage_instructions">Dosage instructions</string>
+    <string name="substitution_allowed">Substitution allowed</string>
+    <string name="reason">Reason</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+
+    <string-array name="categories">
+        <item>inpatient</item>
+        <item>outpatient</item>
+        <item>community</item>
+        <item>discharge</item>
+    </string-array>
+
+    <string-array name="statuses">
+        <item>active</item>
+        <item>on-hold</item>
+        <item>cancelled</item>
+        <item>completed</item>
+        <item>entered-in-error</item>
+        <item>stopped</item>
+        <item>draft</item>
+        <item>unknown</item>
+    </string-array>
+
+    <string-array name="intents">
+        <item>proposal</item>
+        <item>plan</item>
+        <item>order</item>
+        <item>original-order</item>
+        <item>reflex-order</item>
+        <item>filler-order</item>
+        <item>instance-order</item>
+        <item>option</item>
+    </string-array>
+
+    <string-array name="priorities">
+        <item/>
+        <item>routine</item>
+        <item>urgent</item>
+        <item>asap</item>
+        <item>stat</item>
+    </string-array>
+</resources>
